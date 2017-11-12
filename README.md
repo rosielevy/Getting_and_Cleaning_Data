@@ -9,3 +9,5 @@ This repository contains the final assignment for the JHU Getting and Cleaning D
 6. Renames variables with more descriptive (less abbreviated) names
 7. Creates a tidy dataset of the (mean) value of each
    variable.
+
+The tidy data set returned by `run.analysis.R` is of the "wide" format as mentioned by Hadley Wickham. Each row represents one pair of subject and activity from the original test and training data sets, displaying the mean of all variables. The variables themselves have been renamed strategically to allow the user to get a quicker and easier understanding of the data set. However, these names are still slightly abbreviated to allow for optimal use of space. A code book is provided within the repository for users to refer to in case of confusion surrounding any variables. 
