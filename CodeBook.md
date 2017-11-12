@@ -1,12 +1,12 @@
-#Code Book for Getting and Cleaning Data Assignment
+# Code Book for Getting and Cleaning Data Assignment
 
 This code book accompanies the `tidy_data.txt` file that is produced as output from the `run_analysis.R` script.
 
-##ID Fields
+## ID Fields
 * `subject` - ID number of test subject (possible values are 1-30)
 * `Activity_Label` - activity performed when data was obtained
 
-##Activities
+## Activities
 * `WALKING` - subject was walking when data was collected
 * `WALKING_UPSTAIRS` - subject was walking upstairs when data was collected
 * `WALKING_DOWNSTAIRS` - subject was walking downstairs when data was collected
@@ -14,7 +14,7 @@ This code book accompanies the `tidy_data.txt` file that is produced as output f
 * `STANDING` - subject was standing when data was collected
 * `LAYING` - subject was laying down when data was collected
 
-##Measurement Variables
+## Measurement Variables
 
 The final tidy data set contains **means** of all the below variables. Many variables were recorded over three axes.
 
