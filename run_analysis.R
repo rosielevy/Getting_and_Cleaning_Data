@@ -1,9 +1,9 @@
-## Create one R script called run_analysis.R that does the following:
-## 1. Merges the training and the test sets to create one data set.
-## 2. Extracts only the measurements on the mean and standard deviation for each measurement.
-## 3. Uses descriptive activity names to name the activities in the data set
-## 4. Appropriately labels the data set with descriptive activity names.
-## 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+# Create one R script called run_analysis.R that does the following:
+# 1. Merges the training and the test sets to create one data set.
+# 2. Extracts only the measurements on the mean and standard deviation for each measurement.
+# 3. Uses descriptive activity names to name the activities in the data set
+# 4. Appropriately labels the data set with descriptive activity names.
+# 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 if (!require("data.table")) {
       install.packages("data.table")
@@ -95,4 +95,4 @@ melt_data <- melt(data, id = id_labels, measure.vars = data_labels)
 #apply mean to data to form final tidy data set
 tidy_data = dcast(melt_data, subject + Activity_Label ~ variable, mean)
 
-write.table(tidy_data, file = "./tidy_data.txt")
+write.table(tidy_data, file = "./tidy_data.txt", row.names = FALSE)
