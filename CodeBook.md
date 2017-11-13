@@ -16,7 +16,9 @@ For each record it is provided is:
 * An identifier of the subject who carried out the experiment (`subject`).
 
 Acceleration measurements are in standard gravitional units, *g*.
+
 Body acceleration measurements are obtained by subtracting the gravity from the total acceleration, also in *g*.
+
 Gyroscope velocity measurements are in *radians/second*.
 
 ## ID Fields
