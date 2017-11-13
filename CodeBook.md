@@ -21,6 +21,18 @@ Body acceleration measurements are obtained by subtracting the gravity from the 
 
 Gyroscope velocity measurements are in *radians/second*.
 
+## Data Manipulations in `run_analysis` Script
+
+* X and Y test data sets are loaded and subsetted to obtain only those variables that measure mean and standard deviation of measurements, using `grepl` to find variable names (`features`) containing `mean|std`
+* Activity labels are applied to the Y test data set
+* X and Y test data sets are merged using `cbind`
+* X and Y training data sets are loaded and subsetted to obtain only those variables that measure mean and standard deviation of measurements, using `grepl` to find variable names (`features`) containing `mean|std`
+* Activity labels are applied to the Y training data set
+* X and Y training data sets are merged using `cbind`
+* Test and training data are merged using `rbind`
+* Variable names are cleaned up using `gsub` to remove hyphens, duplicated *Body*, and to harmonise presentation of descriptions/measurements such as *Frequency*, *Time*, *Mean* and *StdDev*
+* Data is melted and recast while also calculating the mean of all variables for each subject and activity pair, using `melt` and `dcast` respectively, to obtain a wide tidy data set
+
 ## ID Fields
 * `subject` - ID number of test subject (possible values are 1-30)
 * `Activity_Label` - activity performed when data was obtained
