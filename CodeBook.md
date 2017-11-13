@@ -15,6 +15,10 @@ For each record it is provided is:
 * Its activity label (`Activity_Label`). 
 * An identifier of the subject who carried out the experiment (`subject`).
 
+Acceleration measurements are in standard gravitional units, *g*.
+Body acceleration measurements are obtained by subtracting the gravity from the total acceleration, also in *g*.
+Gyroscope velocity measurements are in *radians/second*.
+
 ## ID Fields
 * `subject` - ID number of test subject (possible values are 1-30)
 * `Activity_Label` - activity performed when data was obtained
